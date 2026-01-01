@@ -32,7 +32,7 @@ addBtn.addEventListener("click", () => {
 function saveTasks() {
     const tasks = [];
     taskList.querySelectorAll("li").forEach(li => {
-        tasks.push(li);
+        tasks.push(li.firstChild.textContent);
     });
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
